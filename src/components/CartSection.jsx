@@ -28,16 +28,16 @@ const CartSection = () => {
     
   return (
     <>
-     <div className="flex flex-col gap-5 h-full">
+     <div className="flex flex-col gap-5 h-full ">
      
     {carts.length === 0 ? (
         <img src={emptyCartImg} className='w-[200px] block mx-auto mt-10' alt="empty" />
     ) :carts.map((cart) => (
         <Cart key={cart.id} cart={cart}/>
     ))}
-    <div className="absolute bottom-10 left-0 w-full bg-white "> 
-        <Container  className="px-5">
-            <div className="border-t border-black flex justify-end gap-10 py-3">
+    <div className=" fixed bottom-14 right-0 left-0 w-full bg-white "> 
+        <Container  className="px-5 ">
+            <div className="border-t border-black flex justify-end gap-10 py-3  ">
                 <div className='text-right'>
                     <p className='text-gray-500'>Total</p>
                     <p className='font-bold'>{total.toFixed(2)}</p>
