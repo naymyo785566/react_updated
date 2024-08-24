@@ -9,6 +9,7 @@ import Rating from '../components/Rating'
 import BreadCrumb from '../components/BreadCrumb'
 import useProductStore from '../store/useProductStore'
 import useCartStore from '../store/useCartStore'
+import toast from 'react-hot-toast'
 
 
 const ProductDetail = () => {
@@ -53,8 +54,8 @@ const handleAddedBtn1 = (event) => {
           <div className="flex justify-between w-full items-center">
 
             <p>{currentProduct.price}</p>
-            {carts.find (cart => cart.productId === currentProduct.id) ? <button onClick={handleAddedBtn1} className='text-sm border border-black bg-black text-white px-3 py-1'>Added</button> :
-            <button onClick={handleAddCartBtn1} className=' text-sm border border-black px-3 py-1'>Add Cart</button>}
+            {carts.find (cart => cart.productId === currentProduct.id) ? <button onClick={handleAddedBtn1} className='text-sm border rounded-md border-black bg-black text-white px-3 py-1'>Added</button> :
+            <button onClick={handleAddCartBtn1} className=' text-sm border rounded-md border-black px-3 py-1'>Add Cart</button>}
             
           </div>
 
